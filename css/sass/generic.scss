@@ -1,0 +1,214 @@
+/**
+ * Generics
+ */
+
+// Float
+.fl {
+	float: left;
+	position: relative;
+}
+.fr {
+	float: right;
+	position: relative;
+}
+.fn {float: none}
+
+// Display
+.db {
+	display: block;
+}
+.dn {
+	display: none;
+}
+.di {
+	display: inline;
+}
+.inline-block {
+	@include inline-block;
+}
+
+// Visibility
+.vh {
+	visibility: hidden;
+}
+.vv {
+	visibility: visible;
+}
+
+// Overflow
+.oh {
+	overflow: hidden;
+}
+
+// Position
+.pa {
+	position: absolute;
+}
+.pf {
+	position: fixed;
+}
+.pr {
+	position: relative;
+}
+
+// Clear
+.cb, .clear {
+	clear: both;
+}
+.cn {
+	clear: none;
+}
+
+// Rounded Corners
+.rounded2 {
+	@include rounded(2px);
+}
+.rounded3 {
+	@include rounded(3px);
+}
+.rounded4,
+.rounded {
+	@include rounded(4px);
+}
+.rounded5 {
+	@include rounded(5px);
+}
+.rounded6 {
+	@include rounded(6px);
+}
+.rounded7 {
+	@include rounded(7px);
+}
+.rounded8 {
+	@include rounded(8px);
+}
+.rounded9 {
+	@include rounded(9px);
+}
+.rounded10 {
+	@include rounded(10px);
+}
+.rounded15 {
+	@include rounded(15px);
+}
+.rounded20 {
+	@include rounded(20px);
+}
+.rounded25 {
+	@include rounded(25px);
+}
+.rounded50 {
+	@include rounded(50%);
+}
+
+.rounded-tr, .rounded4-tr {
+	@include rounded(4px, 'top right');
+}
+.rounded-br, .rounded4-br {
+	@include rounded(4px, 'bottom right');
+}
+.rounded-bl, .rounded4-bl {
+	@include rounded(4px, 'bottom left');
+}
+.rounded-tl, .rounded4-tl {
+	@include rounded(4px, 'top left');
+}
+
+.rounded5-tr {
+	@include rounded(5px, 'top right');
+}
+.rounded5-br {
+	@include rounded(5px, 'bottom right');
+}
+.rounded5-bl {
+	@include rounded(5px, 'bottom left');
+}
+.rounded5-tl {
+	@include rounded(5px, 'top left');
+}
+
+.rounded10-tr {
+	@include rounded(10px, 'top right');
+}
+.rounded10-br {
+	@include rounded(10px, 'bottom right');
+}
+.rounded10-bl {
+	@include rounded(10px, 'bottom left');
+}
+.rounded10-tl {
+	@include rounded(10px, 'top left');
+}
+
+/* Prevent background color leak outs */
+.padding-box {
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip: padding; 
+	background-clip: padding-box;
+}
+
+// Opacity
+.opacity0 {
+	@include opacity(0);
+}
+.opacity50 {
+	@include opacity(0.5);
+}
+.opacity100 {
+	@include opacity(1);
+}
+
+// Transitions
+.transition-all-25 {
+	@include transition(all .25s ease-out);
+}
+.transition-color-25 {
+	@include transition(color .25s ease-out);
+}
+.transition-bg-25 {
+	@include transition(background-color .25s ease-out);
+}
+.transition-border-25 {
+	@include transition(border-color .25s ease-out);
+}
+.transition-opacity-25 {
+	@include transition(opacity .25s ease-out);
+}
+.transition-all-50 {
+	@include transition(all .50s ease-out);
+}
+
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.focus-effect {
+	@include transition(border-color .5s, box-shadow .5s);
+	&:focus {
+		@extend .hover;
+	}
+}
+.hover-effect {
+	@include transition(border-color .5s, box-shadow .5s);
+	&:focus,
+	&:hover {
+		@extend .hover;
+		outline: none;
+	}
+	.oldie &:focus,
+	.lt-ie9 &:focus {
+		outline: 1px thin;
+	}
+}
+.hover {
+	border-color: rgba(82, 168, 236, 0.8);
+	@include box-shadow(0 0 8px rgba(82, 168, 236, 0.6));
+}
+
+.short-string {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
