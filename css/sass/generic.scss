@@ -2,6 +2,14 @@
  * Generics
  */
 
+// unstyle list
+ul.unstyled,
+ol.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 // Float
 .fl {
 	float: left;
@@ -162,6 +170,9 @@
 .transition-all-25 {
 	@include transition(all .25s ease-out);
 }
+.transition-all-50 {
+	@include transition(all .50s ease-out);
+}
 .transition-color-25 {
 	@include transition(color .25s ease-out);
 }
@@ -173,9 +184,6 @@
 }
 .transition-opacity-25 {
 	@include transition(opacity .25s ease-out);
-}
-.transition-all-50 {
-	@include transition(all .50s ease-out);
 }
 
 .border-box {
