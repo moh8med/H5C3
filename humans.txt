@@ -11,5 +11,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, SASS
-    Normalize.css, HTML5 Boilerplate, jQuery, Modernizr, Respond.js, NWMatcher, Selectivizr
+    HTML5, CSS3
+    H5C3, HTML5 Boilerplate, jQuery, Modernizr, Normalize.css, NWMatcher, Respond.js, SASS, Selectivizr
