@@ -372,7 +372,7 @@ button,
 input,
 select,
 textarea {
-  color: #222; }
+  color: #333333; }
 
 html {
   font-size: 1em;
@@ -458,6 +458,21 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  font-family: "Helvetica Neue", Tahoma, Verdana, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.875em; }
+
+/* Links */
+a:link, a:visited {
+  color: #0063dc;
+  text-decoration: none; }
+a:hover, a:active {
+  color: #004eae;
+  text-decoration: underline; }
+
+.link-color, a.link-color {
+  color: #0063dc; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
