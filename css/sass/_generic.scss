@@ -1,0 +1,227 @@
+/**
+ * Generics (Helper classes)
+ */
+
+// unstyle list
+ul.unstyled,
+ol.unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Float
+.fl {
+	float: left;
+	@extend .pr;
+}
+.fr {
+	float: right;
+	@extend .pr;
+}
+.fn {float: none}
+
+// Display
+.db {
+	display: block;
+}
+.dn {
+	display: none;
+}
+.di {
+	display: inline;
+}
+.inline-block {
+	@include inline-block;
+}
+
+// Visibility
+.vh {
+	visibility: hidden;
+}
+.vv {
+	visibility: visible;
+}
+
+// Overflow
+.oh {
+	overflow: hidden;
+}
+
+// Position
+.pa {
+	position: absolute;
+}
+.pf {
+	position: fixed;
+}
+.pr {
+	position: relative;
+}
+
+// Clear
+.cb, .clear {
+	clear: both;
+}
+.cn {
+	clear: none;
+}
+
+.rounded2 {
+	@include border-radius(2px);
+}
+.rounded3 {
+	@include border-radius(3px);
+}
+.rounded4,
+.rounded {
+	@include border-radius(4px);
+}
+.rounded5 {
+	@include border-radius(5px);
+}
+.rounded6 {
+	@include border-radius(6px);
+}
+.rounded10 {
+	@include border-radius(10px);
+}
+.rounded15 {
+	@include border-radius(15px);
+}
+.rounded20 {
+	@include border-radius(20px);
+}
+.rounded25 {
+	@include border-radius(25px);
+}
+.rounded50 {
+	@include border-radius(50%);
+}
+
+.rounded-tr, .rounded4-tr {
+	@include border-radius(4px, 'top right');
+}
+.rounded-br, .rounded4-br {
+	@include border-radius(4px, 'bottom right');
+}
+.rounded-bl, .rounded4-bl {
+	@include border-radius(4px, 'bottom left');
+}
+.rounded-tl, .rounded4-tl {
+	@include border-radius(4px, 'top left');
+}
+
+.rounded5-tr {
+	@include border-radius(5px, 'top right');
+}
+.rounded5-br {
+	@include border-radius(5px, 'bottom right');
+}
+.rounded5-bl {
+	@include border-radius(5px, 'bottom left');
+}
+.rounded5-tl {
+	@include border-radius(5px, 'top left');
+}
+
+.rounded10-tr {
+	@include border-radius(10px, 'top right');
+}
+.rounded10-br {
+	@include border-radius(10px, 'bottom right');
+}
+.rounded10-bl {
+	@include border-radius(10px, 'bottom left');
+}
+.rounded10-tl {
+	@include border-radius(10px, 'top left');
+}
+
+/* Prevent background color leak outs */
+.background-clip {
+	background-clip: padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
+}
+
+.opacity0 {
+	@include opacity(0);
+}
+.opacity50 {
+	@include opacity(0.5);
+}
+.opacity75 {
+	@include opacity(0.75);
+}
+.opacity100 {
+	@include opacity(1);
+}
+
+// Transitions
+.transition-color-25 {
+	@include transition(color .25s ease-out);
+}
+.transition-bg-25 {
+	@include transition(background-color .25s ease-out);
+}
+.transition-border-25 {
+	@include transition(border-color .25s ease-out);
+}
+.transition-boxshadow-25 {
+	@include transition(box-shadow .25s ease-out);
+}
+.transition-opacity-25 {
+	@include transition(opacity .25s ease-out);
+}
+.transition-all-25 {
+	@include transition(all .25s ease-out);
+}
+.transition-all-50 {
+	@include transition(all .50s ease-out);
+}
+
+.border-box {
+	-webkit-box-sizing: border-box; // Android ≤ 2.3, iOS ≤ 4
+	-moz-box-sizing: border-box; // Firefox ≤ 28
+	box-sizing: border-box; // Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1
+}
+
+.gradient-1 {
+	@include linear-gradient(#ffffff, #f0f0f0, #f5f5f5);
+}
+
+.shadow5-13 {
+	@include box-shadow(0 0 5px rgba(0, 0, 0, .13));
+}
+.shadow10-13 {
+	@include box-shadow(0 0 10px rgba(0, 0, 0, .13));
+}
+
+
+.focus-effect {
+	@include transition(border-color .5s, box-shadow .5s);
+	&:focus {
+		@extend .hover;
+	}
+}
+.hover-effect {
+	@include transition(border-color .5s, box-shadow .5s);
+	&:focus,
+	&:hover {
+		@extend .hover;
+		outline: none;
+	}
+	.oldie &:focus,
+	.lt-ie9 &:focus {
+		outline: 1px thin;
+	}
+}
+.hover {
+	border-color: rgba(82, 168, 236, 0.8) !important;
+	@include box-shadow(0 0 8px rgba(82, 168, 236, 0.6) !important);
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
