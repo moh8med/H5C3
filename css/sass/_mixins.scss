@@ -68,9 +68,9 @@
 		#{$property}: #{$fallback}; // fallback if needed
 	}
 
-	#{$property}:	-webkit-calc(#{$expression});
-	#{$property}:	   -moz-calc(#{$expression});
-	#{$property}:			calc(#{$expression});
+	#{$property}:	-webkit-calc(#{$expression}); // Chrome 19-25
+	#{$property}:	   -moz-calc(#{$expression}); // Firefox 4-15
+	#{$property}:			calc(#{$expression}); // Chrome 26+, Firefox 16+, IE 9+, Opera 15+, iOS 7+
 }
 
 @mixin box-shadow($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $shadow5: false) {
