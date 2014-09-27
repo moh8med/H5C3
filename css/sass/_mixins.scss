@@ -62,6 +62,17 @@
 			background-size: $size; // Chrome, Firefox 4+, IE 9+, Opera, Safari 5+
 }
 
+// Usage: @include calc(width, "100% - 20px", 90%);
+@mixin calc($property, $expression, $fallback: false) {
+	@if $fallback {
+		#{$property}: #{$fallback}; // fallback if needed
+	}
+
+	#{$property}:	-webkit-calc(#{$expression});
+	#{$property}:	   -moz-calc(#{$expression});
+	#{$property}:			calc(#{$expression});
+}
+
 @mixin box-shadow($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $shadow5: false) {
 	$params: $shadow1;
 
