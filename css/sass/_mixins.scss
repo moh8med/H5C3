@@ -71,6 +71,9 @@
 	#{$property}:	-webkit-calc(#{$expression}); // Chrome 19-25
 	#{$property}:	   -moz-calc(#{$expression}); // Firefox 4-15
 	#{$property}:			calc(#{$expression}); // Chrome 26+, Firefox 16+, IE 9+, Opera 15+, iOS 7+
+	
+	// Support can be somewhat emulated in older versions of IE using the non-standard expression() syntax.
+	// Partial support in IE9 refers to the browser crashing when used as a background-position value.
 }
 
 @mixin box-shadow($shadow1, $shadow2: false, $shadow3: false, $shadow4: false, $shadow5: false) {
