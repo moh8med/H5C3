@@ -1,9 +1,5 @@
 /*! H5C3 Template v0.0.2 | MIT License | goo.gl/RPcjUW */
 
-// If you use compass, make sure to uncomment the two lines below
-// @import "compass/css3";
-// @import "compass/utilities";
-
 // Variables
 @import "sass/_vars";
 
@@ -14,7 +10,7 @@
 @import "sass/_mixins";
 
 // Normalize
-@import "sass/_normalize";
+@import "sass/vendor/_normalize";
 
 // Plugins
 @import "sass/_plugins";
@@ -23,4 +19,4 @@
 @import "sass/_main";
 
 // Generics (Helper Classes)
-@import "sass/_generic";
+@import "sass/_helpers";
