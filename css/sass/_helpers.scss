@@ -32,7 +32,7 @@ ol.unstyled {
 	display: inline;
 }
 .inline-block {
-	@include inline-block;
+	display: inline-block;
 }
 
 // Visibility
@@ -99,63 +99,22 @@ ol.unstyled {
 	@include border-radius(50%);
 }
 
-/*
-.rounded-tr, .rounded4-tr {
-	@include border-radius(4px, 'top right');
-}
-.rounded-br, .rounded4-br {
-	@include border-radius(4px, 'bottom right');
-}
-.rounded-bl, .rounded4-bl {
-	@include border-radius(4px, 'bottom left');
-}
-.rounded-tl, .rounded4-tl {
-	@include border-radius(4px, 'top left');
-}
-
-.rounded5-tr {
-	@include border-radius(5px, 'top right');
-}
-.rounded5-br {
-	@include border-radius(5px, 'bottom right');
-}
-.rounded5-bl {
-	@include border-radius(5px, 'bottom left');
-}
-.rounded5-tl {
-	@include border-radius(5px, 'top left');
-}
-
-.rounded10-tr {
-	@include border-radius(10px, 'top right');
-}
-.rounded10-br {
-	@include border-radius(10px, 'bottom right');
-}
-.rounded10-bl {
-	@include border-radius(10px, 'bottom left');
-}
-.rounded10-tl {
-	@include border-radius(10px, 'top left');
-}
-*/
-
 /* Prevent background color leak outs */
 .background-clip {
 	background-clip: padding-box; // Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+
 }
 
 .opacity0 {
-	@include opacity(0);
+	opacity: 0;
 }
 .opacity50 {
-	@include opacity(0.5);
+	opacity: 0.5;
 }
 .opacity75 {
-	@include opacity(0.75);
+	opacity: 0.75;
 }
 .opacity100 {
-	@include opacity(1);
+	opacity: 1;
 }
 
 // Transitions

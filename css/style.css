@@ -566,9 +566,7 @@ ol.unstyled {
   display: inline; }
 
 .inline-block {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1; }
+  display: inline-block; }
 
 .vh {
   visibility: hidden; }
@@ -625,46 +623,6 @@ ol.unstyled {
 .rounded50 {
   border-radius: 50%; }
 
-/*
-.rounded-tr, .rounded4-tr {
-	@include border-radius(4px, 'top right');
-}
-.rounded-br, .rounded4-br {
-	@include border-radius(4px, 'bottom right');
-}
-.rounded-bl, .rounded4-bl {
-	@include border-radius(4px, 'bottom left');
-}
-.rounded-tl, .rounded4-tl {
-	@include border-radius(4px, 'top left');
-}
-
-.rounded5-tr {
-	@include border-radius(5px, 'top right');
-}
-.rounded5-br {
-	@include border-radius(5px, 'bottom right');
-}
-.rounded5-bl {
-	@include border-radius(5px, 'bottom left');
-}
-.rounded5-tl {
-	@include border-radius(5px, 'top left');
-}
-
-.rounded10-tr {
-	@include border-radius(10px, 'top right');
-}
-.rounded10-br {
-	@include border-radius(10px, 'bottom right');
-}
-.rounded10-bl {
-	@include border-radius(10px, 'bottom left');
-}
-.rounded10-tl {
-	@include border-radius(10px, 'top left');
-}
-*/
 /* Prevent background color leak outs */
 .background-clip, .rounded2, .rounded3, .rounded4,
 .rounded, .rounded5, .rounded6, .rounded10, .rounded15, .rounded20, .rounded25, .rounded50 {
@@ -672,27 +630,15 @@ ol.unstyled {
 
 .opacity0 {
   opacity: 0; }
-  .lt-ie9 .opacity0 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="0")";
-    filter: alpha(opacity=0); }
 
 .opacity50 {
   opacity: 0.5; }
-  .lt-ie9 .opacity50 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="50")";
-    filter: alpha(opacity=50); }
 
 .opacity75 {
   opacity: 0.75; }
-  .lt-ie9 .opacity75 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="75")";
-    filter: alpha(opacity=75); }
 
 .opacity100 {
   opacity: 1; }
-  .lt-ie9 .opacity100 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="100")";
-    filter: alpha(opacity=100); }
 
 .transition-color-25 {
   -webkit-transition: color 0.25s ease-out;

@@ -1,15 +1,11 @@
-@mixin font-face($family, $filename, $weight: normal, $style: normal) {	
+@mixin font-face($family, $filename, $weight: normal, $style: 400) {	
 @font-face {
 	font-family: "#{$family}";
-	// src: url("../fonts/#{$filename}.eot"); /* IE9 Compat Modes */
-	src: url("../fonts/#{$filename}.eot?#") format("eot"); /* IE9 Compat Modes */
-	src: local("☺"),
-		 // url("../fonts/#{$filename}.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-	     url("../fonts/#{$filename}.woff") format("woff"), /* Modern Browsers */
-	     url("../fonts/#{$filename}.ttf") format("truetype"), /* Safari, Android, iOS */
-	     url("../fonts/#{$filename}.svg##{$filename}") format("svg"); /* Legacy iOS */
-	font-weight: $weight;
 	font-style: $style;
+	font-weight: $weight;
+	src: url("../fonts/#{$filename}.woff2") format("woff2"), /* Super Modern Browsers */
+		 url("../fonts/#{$filename}.woff") format("woff"), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url("../fonts/#{$filename}.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 }
 
@@ -23,12 +19,6 @@
 	&:after {
 		clear: both;
 	}
-}
-
-@mixin inline-block() {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
 }
 
 @mixin border-box() {
@@ -104,16 +94,6 @@
 		// IE6-9
 		// filter: progid:DXImageTransform.Microsoft.gradient( enabled="false", startColorstr="#{ie-hex-str($from)}", endColorstr="#{ie-hex-str($to)}",GradientType=0 );
 	// }
-}
-
-@mixin opacity($value: 0.5) {
-	opacity: $value; // Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
-
-	.lt-ie9 & {
-		$percent: $value * 100;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="#{$percent}")"; // IE 8
-		filter: alpha(opacity=#{$percent}); // IE 5-7
-	}
 }
 
 @mixin transition($params, $params2: false, $params3: false, $params4: false, $params5: false, $params6: false) {
