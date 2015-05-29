@@ -357,7 +357,7 @@ th {
 /**
  * Place any CSS plugins in here.
  */
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -366,19 +366,15 @@ th {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html,
-button,
-input,
-select,
-textarea {
-  color: #333333; }
-
 html {
+  color: #333333;
   font-size: 1em;
   line-height: 1.4; }
 
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
@@ -402,12 +398,15 @@ hr {
   padding: 0; }
 
 /*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 audio,
 canvas,
+iframe,
 img,
+svg,
 video {
   vertical-align: middle; }
 
@@ -479,17 +478,21 @@ a:hover, a:active {
    ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  * {
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
 
@@ -504,11 +507,11 @@ a:hover, a:active {
     content: " (" attr(title) ")"; }
 
   /*
-   * Don't show links for images, or javascript/internal links
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
    */
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: ""; }
 
   pre,
@@ -516,9 +519,12 @@ a:hover, a:active {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
   thead {
-    display: table-header-group;
-    /* h5bp.com/t */ }
+    display: table-header-group; }
 
   tr,
   img {
@@ -527,8 +533,6 @@ a:hover, a:active {
   img {
     max-width: 100% !important; }
 
-  @page {
-    margin: 0.5cm; }
   p,
   h2,
   h3 {
@@ -699,30 +703,14 @@ ol.unstyled {
    H5BP helper classes
    ========================================================================== */
 /*
- * Image replacement
- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px; }
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%; }
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
+ * Hide visually and from screen readers:
  */
 .hidden {
-  display: none !important;
-  visibility: hidden; }
+  display: none !important; }
 
 /*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 .visuallyhidden {
   border: 0;
@@ -735,8 +723,9 @@ ol.unstyled {
   width: 1px; }
 
 /*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
  */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -748,7 +737,7 @@ ol.unstyled {
   width: auto; }
 
 /*
- * Hide visually and from screenreaders, but maintain layout
+ * Hide visually and from screen readers, but maintain layout
  */
 .invisible {
   visibility: hidden; }
@@ -773,12 +762,5 @@ ol.unstyled {
 
 .clearfix:after {
   clear: both; }
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-  *zoom: 1; }
 
 /*# sourceMappingURL=style.css.map */
